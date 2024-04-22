@@ -10,5 +10,6 @@ class User(Base):
     telegram_id = Column(Integer, unique=True, nullable=False)
     username = Column(VARCHAR(32), unique=False, nullable=True)
     server = Column(VARCHAR(50))
+    sub_server = Column(VARCHAR(50))
     reg_date = Column(DATE, default=datetime.date.today())
     upd_date = Column(DATE, onupdate=datetime.date.today())
